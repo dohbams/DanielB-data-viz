@@ -38,8 +38,9 @@ df = rbind(df, df2)
 df$country = factor(df$country, levels = rev(df$country))
 
 # ----- This section sets the colors for our viz ---- #
-colr = c("#1f005c", "#5b0060", "#870160", "#ac255e", "#ca485c", 
-         "#e16b5c", "#f39060", "#ffb56b", "#f99e43", "#cd731a", "#814407")
+colr = c("#FFF7FA", "#FFF7FA", "#FFF7FA","#1f005c", "#870160", "#5b0060", "#ac255e", "#ca485c", 
+         "#e16b5c", "#f39060", "#ffb56b", "#f99e43", "#cd731a", "#814407"
+         )
 
 # ----- This section constructs the layers of our viz ---- #
 
