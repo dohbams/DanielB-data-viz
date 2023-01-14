@@ -18,8 +18,11 @@ for (i in pages) {
   names(table)[1] = 'Position'
   names(table)[3] = 'Played'
   names(table)[8] = 'GD'
+  # add a column for current matchday
   table = table |>  mutate(Matchday = i)
+  # create columns for goals scored and conceeded
   table = table |> separate(Goals, c('GF','GA'), sep = ':')
+  # transform columns to numeric
   table = table |> mutate(GF = as.numeric(GF), GA = as.numeric(GA))
   #save each table to a new variable
   assign(paste0('pl_mw', i), table)
